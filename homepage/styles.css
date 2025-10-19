@@ -48,7 +48,7 @@ body {
 
 /* 헤더 */
 .header {
-    background-color: var(--white);
+    background-color: #d4f4d4;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -146,7 +146,7 @@ body {
     align-items: center;
 }
 
-.lang-btn, .menu-toggle {
+.lang-btn, .menu-toggle, .intranet-btn {
     background: none;
     border: 1px solid var(--gray-300);
     padding: 8px 16px;
@@ -155,11 +155,25 @@ body {
     color: var(--gray-600);
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.lang-btn:hover, .menu-toggle:hover {
+.lang-btn:hover, .menu-toggle:hover, .intranet-btn:hover {
     border-color: var(--primary-color);
     color: var(--primary-color);
+}
+
+.intranet-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.intranet-btn:hover {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+    color: var(--white);
 }
 
 /* 히어로 섹션 */
@@ -187,7 +201,7 @@ body {
 .hero-background {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    background: linear-gradient(135deg, #22d3ee 0%, #10b981 50%, #0f172a 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,8 +215,19 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.12"><!-- 반도체 칩 - 더 명확하게 --><rect x="150" y="200" width="80" height="50" fill="%23ffffff" rx="8" stroke="%23e5e7eb" stroke-width="1"/><rect x="160" y="210" width="60" height="30" fill="%23f3f4f6" rx="4"/><circle cx="170" cy="220" r="3" fill="%23ffffff"/><circle cx="190" cy="220" r="3" fill="%23ffffff"/><circle cx="210" cy="220" r="3" fill="%23ffffff"/><circle cx="170" cy="235" r="3" fill="%23ffffff"/><circle cx="190" cy="235" r="3" fill="%23ffffff"/><circle cx="210" cy="235" r="3" fill="%23ffffff"/><text x="190" y="270" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">CHIP</text><!-- 자동차 - 더 직관적으로 --><rect x="400" y="220" width="100" height="40" fill="%23ffffff" rx="20" stroke="%23e5e7eb" stroke-width="1"/><circle cx="420" cy="265" r="12" fill="%23f3f4f6" stroke="%23ffffff" stroke-width="2"/><circle cx="480" cy="265" r="12" fill="%23f3f4f6" stroke="%23ffffff" stroke-width="2"/><rect x="410" y="200" width="80" height="25" fill="%23ffffff" rx="8"/><rect x="420" y="205" width="60" height="15" fill="%23f3f4f6" rx="3"/><text x="450" y="280" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">AUTO</text><!-- PCB 보드 - 더 명확하게 --><rect x="650" y="200" width="120" height="80" fill="%23ffffff" rx="5" stroke="%23e5e7eb" stroke-width="1"/><rect x="660" y="210" width="100" height="60" fill="%23f3f4f6" rx="3"/><circle cx="670" cy="220" r="2" fill="%23ffffff"/><circle cx="690" cy="220" r="2" fill="%23ffffff"/><circle cx="710" cy="220" r="2" fill="%23ffffff"/><circle cx="730" cy="220" r="2" fill="%23ffffff"/><circle cx="750" cy="220" r="2" fill="%23ffffff"/><circle cx="670" cy="240" r="2" fill="%23ffffff"/><circle cx="690" cy="240" r="2" fill="%23ffffff"/><circle cx="710" cy="240" r="2" fill="%23ffffff"/><circle cx="730" cy="240" r="2" fill="%23ffffff"/><circle cx="750" cy="240" r="2" fill="%23ffffff"/><circle cx="670" cy="260" r="2" fill="%23ffffff"/><circle cx="690" cy="260" r="2" fill="%23ffffff"/><circle cx="710" cy="260" r="2" fill="%23ffffff"/><circle cx="730" cy="260" r="2" fill="%23ffffff"/><circle cx="750" cy="260" r="2" fill="%23ffffff"/><text x="710" y="300" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">PCB</text><!-- 친환경 나무 - 더 직관적으로 --><path d="M100,500 Q100,400 150,450 Q200,400 250,450 Q300,400 350,450 Q400,400 450,450 Q500,400 550,450 Q600,400 650,450 Q700,400 750,450 Q800,400 850,450 Q900,400 950,450 Q1000,400 1050,450 Q1100,400 1150,450" stroke="%23ffffff" stroke-width="4" fill="none"/><circle cx="150" cy="400" r="20" fill="%23ffffff" opacity="0.7"/><circle cx="250" cy="390" r="18" fill="%23ffffff" opacity="0.7"/><circle cx="350" cy="395" r="22" fill="%23ffffff" opacity="0.7"/><circle cx="450" cy="385" r="19" fill="%23ffffff" opacity="0.7"/><circle cx="550" cy="390" r="21" fill="%23ffffff" opacity="0.7"/><circle cx="650" cy="395" r="20" fill="%23ffffff" opacity="0.7"/><circle cx="750" cy="385" r="23" fill="%23ffffff" opacity="0.7"/><circle cx="850" cy="390" r="18" fill="%23ffffff" opacity="0.7"/><circle cx="950" cy="395" r="21" fill="%23ffffff" opacity="0.7"/><circle cx="1050" cy="385" r="19" fill="%23ffffff" opacity="0.7"/></g></svg>');
+    opacity: 0.7;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.15"><!-- 친환경 나무 실루엣 - 더 직관적으로 --><path d="M0,700 Q0,600 50,650 Q100,600 150,650 Q200,600 250,650 Q300,600 350,650 Q400,600 450,650 Q500,600 550,650 Q600,600 650,650 Q700,600 750,650 Q800,600 850,650 Q900,600 950,650 Q1000,600 1050,650 Q1100,600 1150,650 Q1200,600 1200,700" stroke="%23ffffff" stroke-width="6" fill="none"/><circle cx="50" cy="600" r="30" fill="%23ffffff" opacity="0.4"/><circle cx="150" cy="580" r="25" fill="%23ffffff" opacity="0.4"/><circle cx="250" cy="590" r="35" fill="%23ffffff" opacity="0.4"/><circle cx="350" cy="575" r="28" fill="%23ffffff" opacity="0.4"/><circle cx="450" cy="585" r="32" fill="%23ffffff" opacity="0.4"/><circle cx="550" cy="580" r="26" fill="%23ffffff" opacity="0.4"/><circle cx="650" cy="590" r="34" fill="%23ffffff" opacity="0.4"/><circle cx="750" cy="575" r="29" fill="%23ffffff" opacity="0.4"/><circle cx="850" cy="585" r="31" fill="%23ffffff" opacity="0.4"/><circle cx="950" cy="580" r="27" fill="%23ffffff" opacity="0.4"/><circle cx="1050" cy="590" r="33" fill="%23ffffff" opacity="0.4"/><circle cx="1150" cy="575" r="30" fill="%23ffffff" opacity="0.4"/></g></svg>');
+    opacity: 0.5;
 }
 
 .hero-content {

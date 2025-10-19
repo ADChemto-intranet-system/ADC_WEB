@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentScrollY = window.scrollY;
         
         if (currentScrollY > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.backgroundColor = 'rgba(212, 244, 212, 0.95)';
             header.style.backdropFilter = 'blur(10px)';
         } else {
-            header.style.backgroundColor = '#ffffff';
+            header.style.backgroundColor = '#d4f4d4';
             header.style.backdropFilter = 'none';
         }
         
