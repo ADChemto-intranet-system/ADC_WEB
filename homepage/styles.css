@@ -53,6 +53,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin: 0;
+    padding: 0;
 }
 
 .header-content {
@@ -182,6 +184,8 @@ body {
     height: 100vh;
     min-height: 600px;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .hero-slide {
@@ -201,11 +205,16 @@ body {
 .hero-background {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #22d3ee 0%, #10b981 50%, #0f172a 100%);
+    background: 
+        linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(34, 211, 238, 0.05) 30%, rgba(16, 185, 129, 0.15) 70%, rgba(15, 23, 42, 0.02) 100%),
+        url('images/hero-background_rev_02.png') center/cover;
+    background-blend-mode: overlay, normal;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
+    perspective: 1000px;
 }
 
 .hero-background::before {
@@ -215,8 +224,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.12"><!-- 반도체 칩 - 더 명확하게 --><rect x="150" y="200" width="80" height="50" fill="%23ffffff" rx="8" stroke="%23e5e7eb" stroke-width="1"/><rect x="160" y="210" width="60" height="30" fill="%23f3f4f6" rx="4"/><circle cx="170" cy="220" r="3" fill="%23ffffff"/><circle cx="190" cy="220" r="3" fill="%23ffffff"/><circle cx="210" cy="220" r="3" fill="%23ffffff"/><circle cx="170" cy="235" r="3" fill="%23ffffff"/><circle cx="190" cy="235" r="3" fill="%23ffffff"/><circle cx="210" cy="235" r="3" fill="%23ffffff"/><text x="190" y="270" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">CHIP</text><!-- 자동차 - 더 직관적으로 --><rect x="400" y="220" width="100" height="40" fill="%23ffffff" rx="20" stroke="%23e5e7eb" stroke-width="1"/><circle cx="420" cy="265" r="12" fill="%23f3f4f6" stroke="%23ffffff" stroke-width="2"/><circle cx="480" cy="265" r="12" fill="%23f3f4f6" stroke="%23ffffff" stroke-width="2"/><rect x="410" y="200" width="80" height="25" fill="%23ffffff" rx="8"/><rect x="420" y="205" width="60" height="15" fill="%23f3f4f6" rx="3"/><text x="450" y="280" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">AUTO</text><!-- PCB 보드 - 더 명확하게 --><rect x="650" y="200" width="120" height="80" fill="%23ffffff" rx="5" stroke="%23e5e7eb" stroke-width="1"/><rect x="660" y="210" width="100" height="60" fill="%23f3f4f6" rx="3"/><circle cx="670" cy="220" r="2" fill="%23ffffff"/><circle cx="690" cy="220" r="2" fill="%23ffffff"/><circle cx="710" cy="220" r="2" fill="%23ffffff"/><circle cx="730" cy="220" r="2" fill="%23ffffff"/><circle cx="750" cy="220" r="2" fill="%23ffffff"/><circle cx="670" cy="240" r="2" fill="%23ffffff"/><circle cx="690" cy="240" r="2" fill="%23ffffff"/><circle cx="710" cy="240" r="2" fill="%23ffffff"/><circle cx="730" cy="240" r="2" fill="%23ffffff"/><circle cx="750" cy="240" r="2" fill="%23ffffff"/><circle cx="670" cy="260" r="2" fill="%23ffffff"/><circle cx="690" cy="260" r="2" fill="%23ffffff"/><circle cx="710" cy="260" r="2" fill="%23ffffff"/><circle cx="730" cy="260" r="2" fill="%23ffffff"/><circle cx="750" cy="260" r="2" fill="%23ffffff"/><text x="710" y="300" text-anchor="middle" fill="%23ffffff" font-size="12" font-family="Arial">PCB</text><!-- 친환경 나무 - 더 직관적으로 --><path d="M100,500 Q100,400 150,450 Q200,400 250,450 Q300,400 350,450 Q400,400 450,450 Q500,400 550,450 Q600,400 650,450 Q700,400 750,450 Q800,400 850,450 Q900,400 950,450 Q1000,400 1050,450 Q1100,400 1150,450" stroke="%23ffffff" stroke-width="4" fill="none"/><circle cx="150" cy="400" r="20" fill="%23ffffff" opacity="0.7"/><circle cx="250" cy="390" r="18" fill="%23ffffff" opacity="0.7"/><circle cx="350" cy="395" r="22" fill="%23ffffff" opacity="0.7"/><circle cx="450" cy="385" r="19" fill="%23ffffff" opacity="0.7"/><circle cx="550" cy="390" r="21" fill="%23ffffff" opacity="0.7"/><circle cx="650" cy="395" r="20" fill="%23ffffff" opacity="0.7"/><circle cx="750" cy="385" r="23" fill="%23ffffff" opacity="0.7"/><circle cx="850" cy="390" r="18" fill="%23ffffff" opacity="0.7"/><circle cx="950" cy="395" r="21" fill="%23ffffff" opacity="0.7"/><circle cx="1050" cy="385" r="19" fill="%23ffffff" opacity="0.7"/></g></svg>');
-    opacity: 0.7;
+    background: 
+        radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    opacity: 0.6;
+    z-index: 1;
+    animation: none;
+    transform: translateZ(-100px);
 }
 
 .hero-background::after {
@@ -226,9 +239,24 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.15"><!-- 친환경 나무 실루엣 - 더 직관적으로 --><path d="M0,700 Q0,600 50,650 Q100,600 150,650 Q200,600 250,650 Q300,600 350,650 Q400,600 450,650 Q500,600 550,650 Q600,600 650,650 Q700,600 750,650 Q800,600 850,650 Q900,600 950,650 Q1000,600 1050,650 Q1100,600 1150,650 Q1200,600 1200,700" stroke="%23ffffff" stroke-width="6" fill="none"/><circle cx="50" cy="600" r="30" fill="%23ffffff" opacity="0.4"/><circle cx="150" cy="580" r="25" fill="%23ffffff" opacity="0.4"/><circle cx="250" cy="590" r="35" fill="%23ffffff" opacity="0.4"/><circle cx="350" cy="575" r="28" fill="%23ffffff" opacity="0.4"/><circle cx="450" cy="585" r="32" fill="%23ffffff" opacity="0.4"/><circle cx="550" cy="580" r="26" fill="%23ffffff" opacity="0.4"/><circle cx="650" cy="590" r="34" fill="%23ffffff" opacity="0.4"/><circle cx="750" cy="575" r="29" fill="%23ffffff" opacity="0.4"/><circle cx="850" cy="585" r="31" fill="%23ffffff" opacity="0.4"/><circle cx="950" cy="580" r="27" fill="%23ffffff" opacity="0.4"/><circle cx="1050" cy="590" r="33" fill="%23ffffff" opacity="0.4"/><circle cx="1150" cy="575" r="30" fill="%23ffffff" opacity="0.4"/></g></svg>');
-    opacity: 0.5;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(16, 185, 129, 0.05) 50%, transparent 100%),
+        linear-gradient(0deg, transparent 0%, rgba(34, 211, 238, 0.03) 50%, transparent 100%);
+    animation: none;
+    z-index: 2;
+    transform: translateZ(-50px);
 }
+
+@keyframes ecoRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes ecoShimmer {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
 
 .hero-content {
     text-align: center;
@@ -612,27 +640,44 @@ body {
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
+        justify-content: space-between;
     }
     
     .main-nav {
-        margin: 0;
-        width: 100%;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #d4f4d4;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .main-nav.active {
+        display: block;
+        max-height: 500px;
     }
     
     .nav-menu {
         flex-direction: column;
         gap: 0;
+        padding: 0;
     }
     
     .nav-item {
-        border-bottom: 1px solid var(--gray-200);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
     
     .nav-item a {
         display: block;
-        padding: 15px 0;
+        padding: 15px 20px;
+        color: var(--gray-800);
     }
     
     .submenu {
@@ -641,8 +686,14 @@ body {
         visibility: visible;
         transform: none;
         box-shadow: none;
-        background-color: var(--gray-100);
+        background-color: rgba(0, 0, 0, 0.05);
         border-radius: 0;
+        padding-left: 20px;
+    }
+    
+    .submenu li a {
+        padding: 10px 20px;
+        font-size: 14px;
     }
     
     .hero-title {
