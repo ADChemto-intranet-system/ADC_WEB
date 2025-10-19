@@ -1,32 +1,273 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ADChemto</title>
-  <style>
-    :root{
-      --teal:#22d3ee; --gold:#f5c542; --navy:#0f172a;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;background:var(--navy);color:#fff}
-    header{padding:16px 24px;border-bottom:2px solid var(--teal);}
-    header .logo{font-weight:700;letter-spacing:.5px}
-    header .logo em{color:var(--gold);font-style:normal}
-    .hero{padding:80px 24px;max-width:980px;margin:0 auto;text-align:center}
-    .hero h1{font-size:40px;margin:0 0 12px;color:var(--teal)}
-    .hero p{opacity:.9;margin:0 0 24px}
-    .btn{display:inline-block;padding:12px 20px;border-radius:10px;border:2px solid var(--gold);color:var(--navy);background:var(--gold);text-decoration:none;font-weight:600}
-    footer{padding:24px;text-align:center;opacity:.7;border-top:1px dashed rgba(255,255,255,.2)}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADChemto - Advanced Development through Chemistry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header><div class="logo">AD<span style="color:var(--teal)">Chem</span>t<em>o</em></div></header>
-  <section class="hero">
-    <h1>Advanced Development through Chemistry</h1>
-    <p>친환경 고부가 제품을 만드는 화학 기업, ADChemto</p>
-    <a class="btn" href="/intranet/">사내 인트라넷 가기</a>
-  </section>
-  <footer>© ADChemto</footer>
+    <!-- 팝업레이어 알림 -->
+    <div id="popup-notification" class="popup-notification">
+        팝업레이어 알림이 없습니다.
+    </div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>ADChemto</h1>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-item has-submenu">
+                            <a href="#about">회사소개</a>
+                            <ul class="submenu">
+                                <li><a href="#company-overview">회사개요</a></li>
+                                <li><a href="#vision">비전</a></li>
+                                <li><a href="#talent">인재상</a></li>
+                                <li><a href="#ceo-message">CEO인사말</a></li>
+                                <li><a href="#history">회사연혁</a></li>
+                                <li><a href="#location">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#products">제품정보</a>
+                            <ul class="submenu">
+                                <li><a href="#chemical-products">화학제품</a></li>
+                                <li><a href="#environmental-solutions">환경솔루션</a></li>
+                                <li><a href="#research-services">연구서비스</a></li>
+                                <li><a href="#custom-solutions">맞춤솔루션</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#technology">기술자료</a>
+                            <ul class="submenu">
+                                <li><a href="#green-chemistry">친환경화학</a></li>
+                                <li><a href="#sustainability">지속가능성</a></li>
+                                <li><a href="#innovation">혁신기술</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a href="#customer">고객센터</a>
+                            <ul class="submenu">
+                                <li><a href="#notice">공지사항</a></li>
+                                <li><a href="#inquiry">문의하기</a></li>
+                                <li><a href="#faq">자주하는 질문</a></li>
+                                <li><a href="#pr">PR</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="lang-btn">EN</button>
+                    <button class="menu-toggle">전체메뉴열기</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- 히어로 섹션 -->
+        <section class="hero">
+            <div class="hero-slide active">
+                <div class="hero-background">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Innovation Solution Provider</h2>
+                        <p class="hero-subtitle">친환경 화학기술로 지속가능한 미래를 만듭니다.</p>
+                        <button class="hero-cta">더 알아보기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-background">
+                    <div class="hero-content">
+                        <h2 class="hero-title">Green Chemistry</h2>
+                        <h3 class="hero-subtitle">Specialized Company</h3>
+                        <p class="hero-description">친환경 화학 솔루션을 통해 산업의 지속가능성과 품질의 새로운 기준을 만듭니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-indicators">
+                <span class="indicator active">01</span>
+                <span class="indicator">01</span>
+            </div>
+        </section>
+
+        <!-- 제품 섹션 -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">PRODUCT</h2>
+                    <p class="section-subtitle">친환경 화학 솔루션에 최적의 제품을 제공합니다.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product1.jpg" alt="친환경 화학제품">
+                        </div>
+                        <h3 class="product-title">친환경 화학제품</h3>
+                        <p class="product-description">지속가능한 화학 솔루션</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product2.jpg" alt="환경솔루션">
+                        </div>
+                        <h3 class="product-title">환경솔루션</h3>
+                        <p class="product-description">환경 보호를 위한 혁신 기술</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product3.jpg" alt="연구서비스">
+                        </div>
+                        <h3 class="product-title">연구서비스</h3>
+                        <p class="product-description">맞춤형 연구 및 개발</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product4.jpg" alt="맞춤솔루션">
+                        </div>
+                        <h3 class="product-title">맞춤솔루션</h3>
+                        <p class="product-description">고객 맞춤형 화학 솔루션</p>
+                    </div>
+                </div>
+                <div class="section-action">
+                    <button class="btn-more">MORE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 회사 소개 섹션 -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-title">About <strong>ADChemto</strong></h2>
+                        <p class="about-description">
+                            친환경 화학기술로 PCB, 전자부품, 반도체 등 공정 및 품질관리에 필요한 
+                            화학 솔루션과 친환경 제품을 개발하는 기업입니다.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">🌱</div>
+                                <h4>친환경 기술</h4>
+                                <p>국내에서 유일하게 친환경 화학기술 보유</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔬</div>
+                                <h4>독보적 기술</h4>
+                                <p>친환경 화학 관련 특허기술 보유</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎯</div>
+                                <h4>고객맞춤형</h4>
+                                <p>고객 요구사항에 따른 맞춤형 솔루션 제공</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🌍</div>
+                                <h4>글로벌 확장</h4>
+                                <p>OLED, 수소연료전지, 2차 전지 분야로 시장 확대</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 파트너 섹션 -->
+        <section class="partners-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">20년간의 축적된 친환경 화학기술로</h2>
+                    <h3 class="section-subtitle">글로벌 탑티어 고객사와 함께 합니다.</h3>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-item">고객사 A</div>
+                    <div class="partner-item">고객사 B</div>
+                    <div class="partner-item">고객사 C</div>
+                    <div class="partner-item">고객사 D</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 뉴스 섹션 -->
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">ADChemto PR</h2>
+                    <div class="section-actions">
+                        <button class="btn-more">MORE</button>
+                    </div>
+                </div>
+                <div class="news-grid">
+                    <div class="news-item">
+                        <div class="news-image">
+                            <img src="images/news1.jpg" alt="뉴스 이미지">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">[신제품 출시] 친환경 화학제품 ECO-100 출시</h3>
+                            <p class="news-date">2024-10-19</p>
+                            <p class="news-description">지속가능한 미래를 위한 새로운 친환경 화학제품을 출시했습니다.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-image">
+                            <img src="images/news2.jpg" alt="뉴스 이미지">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">ADChemto NEW Line-up 친환경 솔루션 출시!</h3>
+                            <p class="news-date">2024-10-15</p>
+                            <p class="news-description">혁신적인 친환경 화학 솔루션 라인업을 공개했습니다.</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-image">
+                            <img src="images/news3.jpg" alt="뉴스 이미지">
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">친환경 화학기술 특허 획득</h3>
+                            <p class="news-date">2024-10-10</p>
+                            <p class="news-description">혁신적인 친환경 화학기술에 대한 특허를 획득했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-actions">
+                    <button class="btn-catalog">카탈로그 다운받기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>개인정보 처리방침</h4>
+                    <h4>이메일 집단수신거부</h4>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-address">
+                        <h5>본사</h5>
+                        <p>A. (12345) 서울특별시 강남구 테헤란로 123</p>
+                        <p>T. 02-1234-5678 F. 02-1234-5679 E. info@adchemto.com</p>
+                    </div>
+                    <div class="footer-address">
+                        <h5>연구소</h5>
+                        <p>A. (54321) 경기도 성남시 분당구 판교로 456</p>
+                        <p>T. 031-123-4567 F. 031-123-4568 E. research@adchemto.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright ⓒ (주)ADChemto ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
