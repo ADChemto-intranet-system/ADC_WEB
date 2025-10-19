@@ -1,0 +1,20 @@
+.DS_Store
+Thumbs.db
+@eaDir/
+.vscode/
+.idea/
+*.code-workspace
+node_modules/
+dist/
+build/
+.env
+
+# 이미지 파일들 (필요시 주석 해제)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.svg
+# *.webp
+# *.bmp
+# *.tiff

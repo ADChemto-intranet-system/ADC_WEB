@@ -1,0 +1,20 @@
+# OS / Synology
+.DS_Store
+Thumbs.db
+@eaDir/
+
+# IDE / Tooling
+.vscode/
+.idea/
+*.code-workspace
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
+
+# PHP / Composer / Env
+vendor/
+composer.lock
+.env
+.env.local
