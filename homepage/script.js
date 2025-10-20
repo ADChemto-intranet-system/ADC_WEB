@@ -7,9 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-            const isActive = mainNav.classList.contains('active');
-            menuToggle.textContent = isActive ? '메뉴닫기' : '전체메뉴열기';
+            if (window.innerWidth <= 768) {
+                // 모바일: 슬라이드 토글
+                mainNav.classList.toggle('active');
+            } else {
+                // 데스크톱: 전체 드롭다운 패널 토글
+                mainNav.classList.toggle('desktop-open');
+            }
+            const opened = mainNav.classList.contains('active') || mainNav.classList.contains('desktop-open');
+            menuToggle.textContent = opened ? '메뉴닫기' : '전체메뉴열기';
+        });
+
+        // 바깥 영역 클릭 시 닫기 (데스크톱 전용)
+        document.addEventListener('click', function(e) {
+            const clickInside = mainNav.contains(e.target) || menuToggle.contains(e.target);
+            if (!clickInside && mainNav.classList.contains('desktop-open')) {
+                mainNav.classList.remove('desktop-open');
+                menuToggle.textContent = '전체메뉴열기';
+            }
         });
     }
 
@@ -185,8 +200,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // 윈도우 리사이즈 이벤트
     window.addEventListener('resize', function() {
         // 모바일에서 데스크톱으로 변경 시 메뉴 상태 초기화
-        if (window.innerWidth > 768 && mainNav) {
-            mainNav.classList.remove('active');
+        if (mainNav) {
+            if (window.innerWidth > 768) {
+                mainNav.classList.remove('active');
+            } else {
+                mainNav.classList.remove('desktop-open');
+            }
             menuToggle.textContent = '전체메뉴열기';
         }
     });
