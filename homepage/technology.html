@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADChemto - Advanced Surface Treatment</title>
+    <title>기술자료 - ADChemto</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- 헤더 -->
     <header class="header">
         <div class="container">
@@ -20,6 +19,7 @@
                     </div>
                     <p class="logo-tagline">Novel Chemical for Surface Treatment</p>
                 </a>
+                
                 <nav class="main-nav">
                     <ul class="nav-menu">
                         <li class="nav-item has-submenu">
@@ -61,7 +61,7 @@
                 </nav>
                 <div class="header-actions">
                     <a href="index_en.html" class="lang-btn">EN</a>
-                    <button class="menu-toggle">전체메뉴열기</button>
+                    <a href="index.html" class="menu-toggle">메인으로</a>
                     <a href="../intranet/" class="intranet-btn">Intranet</a>
                 </div>
             </div>
@@ -70,102 +70,84 @@
 
     <!-- 메인 콘텐츠 -->
     <main>
-        <!-- 히어로 섹션 -->
-  <section class="hero">
-            <div class="hero-slide active">
-                <div class="hero-background">
-                    <div class="hero-content">
-                        <h2 class="hero-title">To Be the Green Chemical Company for Future</h2>
-                        <p class="hero-subtitle">친환경 화학기술로 지속가능한 미래를 만듭니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide">
-                <div class="hero-background">
-                    <div class="hero-content">
-                        <h2 class="hero-title">To Be the Convergence Technology<h2>
-                        <h3 class="hero-subtitle">Echo-Chemical & Autonomous Driving Lab.</h3>
-                        <p class="hero-description">화학 및 자동화 그리고 분석을 통한 지속가능한 품질의 기준을 만듭니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-indicators">
-                <span class="indicator active">01</span>
-                <span class="indicator">01</span>
+        <section id="top" class="hero">
+            <div class="hero-content">
+                <h1>기술자료</h1>
+                <p>ADChemto의 혁신적인 기술과 연구 성과를 소개합니다.</p>
             </div>
         </section>
 
-        <!-- 제품 섹션 -->
-        <section class="products-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">PRODUCT</h2>
-                    <p class="section-subtitle">고객의 니즈에 최적화된 제품 및 혁신을 제공합니다.</p>
+        <!-- 친환경화학 -->
+        <section id="green-chemistry" class="container" style="padding: 40px 0;">
+            <h3 class="section-title">친환경화학</h3>
+            <div class="technology-content">
+                <div class="technology-description">
+                    <p>환경 친화적인 화학 기술을 통해 지속가능한 미래를 만들어갑니다. 저유해·저탄소 공정과 무독성 대체기술을 적용하여 환경에 미치는 영향을 최소화합니다.</p>
                 </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product1.jpg" alt="표면처리 약품">
-                        </div>
-                        <h3 class="product-title">표면처리 약품</h3>
-                        <p class="product-description">고품질 표면처리 솔루션</p>
+                <div class="technology-features">
+                    <div class="feature-item">
+                        <h4>저유해 공정</h4>
+                        <p>환경에 미치는 유해한 영향을 최소화한 공정 기술</p>
                     </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product2.jpg" alt="연구개발 서비스">
-                        </div>
-                        <h3 class="product-title">연구개발 서비스</h3>
-                        <p class="product-description">맞춤형 연구 및 개발 솔루션</p>
+                    <div class="feature-item">
+                        <h4>저탄소 기술</h4>
+                        <p>탄소 배출을 최소화하는 친환경 기술</p>
                     </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product3.jpg" alt="인라인 약품분석">
-                        </div>
-                        <h3 class="product-title">인라인 약품분석</h3>
-                        <p class="product-description">자동화를 위한 실시간 품질 분석 및 공정관리</p>
-                    </div>
-                </div>
-                <div class="section-action">
-                    <button class="btn-more">MORE</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 회사 소개 섹션 -->
-        <section class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2 class="about-title">About <strong>ADChemto</strong></h2>
-                        <p class="about-description">
-                            ADChemto는 친환경 화학기술로 PCB, 반도체, 자동차 등 첨단 산업의 표면처리 공정을 혁신하는 기업입니다.
-                            <br>고객 맞춤형 화학 솔루션과 연구개발 서비스를 통해 산업의 품질 기준을 새롭게 제시합니다.
-                        </p>
-                        <div class="about-features">
-                            <div class="feature-item">
-                                <div class="feature-icon">🌱</div>
-                                <h4>친환경 기술</h4>
-                                <p>저유해·저탄소 공정과 무독성 대체기술 적용</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🔬</div>
-                                <h4>혁신적 기술</h4>
-                                <p>표면처리·분석 자동화를 위한 자체 신기술</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🎯</div>
-                                <h4>고객 맞춤형</h4>
-                                <p>공정·설비·품질 조건에 맞춘 최적화 제공</p>
-                            </div>
-                        </div>
+                    <div class="feature-item">
+                        <h4>무독성 대체</h4>
+                        <p>기존 유해 물질을 무독성 물질로 대체하는 기술</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+        <!-- 지속가능성 -->
+        <section id="sustainability" class="container" style="padding: 40px 0;">
+            <h3 class="section-title">지속가능성</h3>
+            <div class="technology-content">
+                <div class="technology-description">
+                    <p>지속가능한 발전을 위한 기술 개발에 집중합니다. 환경, 사회, 경제적 측면을 모두 고려한 균형 잡힌 기술 솔루션을 제공합니다.</p>
+                </div>
+                <div class="technology-features">
+                    <div class="feature-item">
+                        <h4>환경 보호</h4>
+                        <p>환경을 보호하면서도 효율적인 생산을 위한 기술</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>사회적 책임</h4>
+                        <p>사회적 가치를 창출하는 기술 개발</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>경제적 효율성</h4>
+                        <p>경제적 효율성을 높이는 지속가능한 기술</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        
+        <!-- 혁신기술 -->
+        <section id="innovation" class="container" style="padding: 40px 0;">
+            <h3 class="section-title">혁신기술</h3>
+            <div class="technology-content">
+                <div class="technology-description">
+                    <p>표면처리·분석 자동화를 위한 자체 신기술을 개발합니다. 첨단 기술을 통해 산업의 효율성과 품질을 동시에 향상시킵니다.</p>
+                </div>
+                <div class="technology-features">
+                    <div class="feature-item">
+                        <h4>자동화 기술</h4>
+                        <p>표면처리 공정의 완전 자동화 기술</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>분석 기술</h4>
+                        <p>정밀한 품질 분석을 위한 첨단 기술</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>AI 통합</h4>
+                        <p>인공지능을 활용한 스마트 제조 기술</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- 푸터 -->

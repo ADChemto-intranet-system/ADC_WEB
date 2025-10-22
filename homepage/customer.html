@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADChemto - Advanced Surface Treatment</title>
+    <title>고객센터 - ADChemto</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- 헤더 -->
     <header class="header">
         <div class="container">
@@ -20,6 +19,7 @@
                     </div>
                     <p class="logo-tagline">Novel Chemical for Surface Treatment</p>
                 </a>
+                
                 <nav class="main-nav">
                     <ul class="nav-menu">
                         <li class="nav-item has-submenu">
@@ -61,7 +61,7 @@
                 </nav>
                 <div class="header-actions">
                     <a href="index_en.html" class="lang-btn">EN</a>
-                    <button class="menu-toggle">전체메뉴열기</button>
+                    <a href="index.html" class="menu-toggle">메인으로</a>
                     <a href="../intranet/" class="intranet-btn">Intranet</a>
                 </div>
             </div>
@@ -70,102 +70,78 @@
 
     <!-- 메인 콘텐츠 -->
     <main>
-        <!-- 히어로 섹션 -->
-  <section class="hero">
-            <div class="hero-slide active">
-                <div class="hero-background">
-                    <div class="hero-content">
-                        <h2 class="hero-title">To Be the Green Chemical Company for Future</h2>
-                        <p class="hero-subtitle">친환경 화학기술로 지속가능한 미래를 만듭니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-slide">
-                <div class="hero-background">
-                    <div class="hero-content">
-                        <h2 class="hero-title">To Be the Convergence Technology<h2>
-                        <h3 class="hero-subtitle">Echo-Chemical & Autonomous Driving Lab.</h3>
-                        <p class="hero-description">화학 및 자동화 그리고 분석을 통한 지속가능한 품질의 기준을 만듭니다.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-indicators">
-                <span class="indicator active">01</span>
-                <span class="indicator">01</span>
+        <section id="top" class="hero">
+            <div class="hero-content">
+                <h1>고객센터</h1>
+                <p>ADChemto 고객을 위한 다양한 서비스를 제공합니다.</p>
             </div>
         </section>
 
-        <!-- 제품 섹션 -->
-        <section class="products-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">PRODUCT</h2>
-                    <p class="section-subtitle">고객의 니즈에 최적화된 제품 및 혁신을 제공합니다.</p>
+        <!-- 공지사항 -->
+        <section id="notice" class="container" style="padding: 40px 0;">
+            <h3 class="section-title">공지사항</h3>
+            <div class="notice-list">
+                <div class="notice-item">
+                    <div class="notice-date">2024.01.15</div>
+                    <div class="notice-title">신제품 출시 안내</div>
                 </div>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product1.jpg" alt="표면처리 약품">
-                        </div>
-                        <h3 class="product-title">표면처리 약품</h3>
-                        <p class="product-description">고품질 표면처리 솔루션</p>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product2.jpg" alt="연구개발 서비스">
-                        </div>
-                        <h3 class="product-title">연구개발 서비스</h3>
-                        <p class="product-description">맞춤형 연구 및 개발 솔루션</p>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="images/product3.jpg" alt="인라인 약품분석">
-                        </div>
-                        <h3 class="product-title">인라인 약품분석</h3>
-                        <p class="product-description">자동화를 위한 실시간 품질 분석 및 공정관리</p>
-                    </div>
+                <div class="notice-item">
+                    <div class="notice-date">2024.01.10</div>
+                    <div class="notice-title">공장 휴무 안내</div>
                 </div>
-                <div class="section-action">
-                    <button class="btn-more">MORE</button>
+                <div class="notice-item">
+                    <div class="notice-date">2024.01.05</div>
+                    <div class="notice-title">시스템 점검 안내</div>
                 </div>
             </div>
         </section>
 
-        <!-- 회사 소개 섹션 -->
-        <section class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2 class="about-title">About <strong>ADChemto</strong></h2>
-                        <p class="about-description">
-                            ADChemto는 친환경 화학기술로 PCB, 반도체, 자동차 등 첨단 산업의 표면처리 공정을 혁신하는 기업입니다.
-                            <br>고객 맞춤형 화학 솔루션과 연구개발 서비스를 통해 산업의 품질 기준을 새롭게 제시합니다.
-                        </p>
-                        <div class="about-features">
-                            <div class="feature-item">
-                                <div class="feature-icon">🌱</div>
-                                <h4>친환경 기술</h4>
-                                <p>저유해·저탄소 공정과 무독성 대체기술 적용</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🔬</div>
-                                <h4>혁신적 기술</h4>
-                                <p>표면처리·분석 자동화를 위한 자체 신기술</p>
-                            </div>
-                            <div class="feature-item">
-                                <div class="feature-icon">🎯</div>
-                                <h4>고객 맞춤형</h4>
-                                <p>공정·설비·품질 조건에 맞춘 최적화 제공</p>
-                            </div>
-                        </div>
+        <!-- 문의하기 -->
+        <section id="inquiry" class="container" style="padding: 40px 0;">
+            <h3 class="section-title" style="text-align:left">문의하기</h3>
+            <div class="inquiry-content">
+                <div class="contact-info">
+                    <h4>연락처 정보</h4>
+                    <div class="contact-item">
+                        <strong>전화</strong>: 062-123-4567
                     </div>
+                    <div class="contact-item">
+                        <strong>이메일</strong>: info@adchemto.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>팩스</strong>: 062-123-4568
+                    </div>
+                    <div class="contact-item">
+                        <strong>주소</strong>: 광주광역시 광산구 남부대학로 38, 창업보육센터
+                    </div>
+                </div>
+                
+                <div class="inquiry-form">
+                    <h4>온라인 문의</h4>
+                    <p style="margin-bottom: 30px; color: #64748b;">궁금한 사항이 있으시면 언제든 문의해 주세요. 빠른 시일 내에 답변드리겠습니다.</p>
+                    <button onclick="showInquiryForm()" class="btn-inquiry">문의하기</button>
                 </div>
             </div>
         </section>
 
-        
-
-        
+        <!-- 자주하는 질문 -->
+        <section id="faq" class="container" style="padding: 40px 0;">
+            <h3 class="section-title">자주하는 질문</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">제품 문의는 어떻게 하나요?</div>
+                    <div class="faq-answer">전화 또는 이메일로 문의해 주시면 담당자가 안내해 드립니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">배송 기간은 얼마나 걸리나요?</div>
+                    <div class="faq-answer">지역에 따라 1-3일 정도 소요됩니다.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">A/S는 어떻게 신청하나요?</div>
+                    <div class="faq-answer">고객센터로 연락주시면 A/S를 신청해 드립니다.</div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- 푸터 -->
